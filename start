@@ -1,0 +1,4 @@
+#!/bin/bash
+
+grep -Irl {{App-Name}} . --exclude-dir=.git | xargs sed -i '' -e 's/{{App-Name}}/$1/g'
+zmv -W '*{{App-Name}}*' '*$1*'
