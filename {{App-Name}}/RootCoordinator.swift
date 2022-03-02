@@ -13,6 +13,7 @@ class RootCoordinator: UIViewController {
     
     rootController.viewControllers = [ViewController()]
     addChild(rootController)
+    rootController.view.translatesAutoresizingMaskIntoConstraints = false
     view.addSubview(rootController.view)
     NSLayoutConstraint.activate([
       rootController.view.topAnchor.constraint(equalTo: view.topAnchor),
